@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A2947"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/Appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/appbar_shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linear"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <View
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintTop_toBottomOf="@id/Appbar"
+        />
+
+
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:importantForAccessibility="no"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/arrow"
+        />
+
+    <ImageButton
+        android:id="@+id/OptionsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:importantForAccessibility="no"
+        android:src="@drawable/options"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/TextFragment"
+        app:layout_constraintBottom_toBottomOf="@id/TextFragment"
+        android:layout_marginEnd="20dp"
+        />
+    <ImageButton
+        android:id="@+id/VideocallButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@id/OptionsButton"
+        app:layout_constraintTop_toTopOf="@id/OptionsButton"
+        app:layout_constraintBottom_toBottomOf="@id/OptionsButton"
+        android:src="@drawable/video_call"
+        android:layout_marginEnd="12dp"
+        />
+    <ImageButton
+        android:id="@+id/CallButton"
+        android:layout_width="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/VideocallButton"
+        app:layout_constraintTop_toTopOf="@id/VideocallButton"
+        app:layout_constraintBottom_toBottomOf="@id/VideocallButton"
+        android:src="@drawable/call"
+        android:layout_marginEnd="12dp"
+
+        />
+    <TextView
+        android:id="@+id/TextFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/BackButton"
+        android:text="dsadsadsadsadsd"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recyclechat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:nestedScrollingEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        app:layout_constraintBottom_toTopOf="@id/ImageEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/ImageEdit"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        app:layout_constraintTop_toBottomOf="@id/Recyclechat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LoginEdit"
+        android:layout_width="294dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="@id/ImageEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/SendButton"
+        app:hintTextColor="@color/white"
+        android:hint="Type a message..."
+        app:circularflow_defaultRadius="6dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/LoginEditText"
+            android:layout_width="294dp"
+            android:backgroundTint="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/rounded_corners"
+            android:layout_height="70dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <ImageButton
+        android:id="@+id/SendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/LoginEdit"
+        app:layout_constraintBottom_toBottomOf="@id/LoginEdit"
+        app:layout_constraintTop_toTopOf="@id/LoginEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/baseline_send_24"
+        android:background="@drawable/sound_btn"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

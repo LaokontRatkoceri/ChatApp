@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragmentHome"
+    android:id="@+id/main_graph">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.chatapp.ui.home.Homefragment"
+        app:defaultNavHost="true"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+        <action
+            android:id="@+id/action_fragmentHome_to_chat_messages"
+            app:destination="@id/chat_messages" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentProfile"
+        android:name="com.example.chatapp.ui.Profile.ProfileFragment"
+        android:label="fragmentProfile"
+        tools:layout="@layout/profile_fragment">
+
+
+        <action
+            android:id="@+id/action_fragmentProfile_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragmentProfile_to_chat_messages"
+            app:destination="@id/chat_messages" />
+    </fragment>
+    <fragment
+        android:id="@+id/chat_messages"
+        android:name="com.example.chatapp.ui.chat.chatFragment"
+        android:label="chatFragment"
+        tools:layout="@layout/chat_messages">
+
+
+        <action
+            android:id="@+id/action_chat_messages_to_fragmentProfile"
+            app:destination="@id/fragmentProfile" />
+        <action
+            android:id="@+id/action_chat_messages_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_chat_messages_to_ChatActivity"
+            app:destination="@id/ChatActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ChatActivity"
+        tools:layout="@layout/chat_activity_fragment"
+        android:name="com.example.chatapp.ui.chat.ChatActivity.ChatActivity"
+        android:label="chatActivity"
+
+        >
+        <argument
+            app:argType="string"
+            android:name="EmailId"/>
+        <argument
+            app:argType="string"
+            android:name="Uid"/>
+        <action
+            android:id="@+id/action_ChatActivity_to_chat_messages"
+            app:destination="@id/chat_messages" />
+
+    </fragment>
+</navigation>

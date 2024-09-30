@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+
+    android:background="#1A2947">
+
+    <ImageView
+        android:id="@+id/SignupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/titlesignup"
+
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/UsernameEdit"
+        android:layout_width="345dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SignupTitle"
+        app:hintTextColor="@color/white"
+        app:circularflow_defaultRadius="6dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/UsernameText"
+            android:layout_width="match_parent"
+            android:backgroundTint="#D9D9D9"
+            android:hint="Email"
+            android:textColorHint="@color/white"
+            android:alpha=".6"
+            android:background="@drawable/rounded_corners"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/PasswordEdit"
+        android:layout_width="345dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/UsernameEdit"
+        app:hintTextColor="@color/white"
+        app:circularflow_defaultRadius="6dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/PasswordEditText"
+            android:layout_width="match_parent"
+            android:backgroundTint="#D9D9D9"
+            android:textColorHint="@color/white"
+            android:alpha=".6"
+            android:hint="Password"
+
+            android:background="@drawable/rounded_corners"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/FirstnameEdit"
+        android:layout_width="345dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PasswordEdit"
+        app:hintTextColor="@color/white"
+        app:circularflow_defaultRadius="6dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/FirstnameEditText"
+            android:layout_width="match_parent"
+            android:backgroundTint="#D9D9D9"
+            android:textColorHint="@color/white"
+            android:alpha=".6"
+            android:hint="Firstname"
+
+            android:background="@drawable/rounded_corners"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LastnameEdit"
+        android:layout_width="345dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/FirstnameEdit"
+        app:hintTextColor="@color/white"
+        app:circularflow_defaultRadius="6dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/LastnameEditText"
+            android:layout_width="match_parent"
+            android:backgroundTint="#D9D9D9"
+            android:textColorHint="@color/white"
+            android:alpha=".6"
+            android:hint="Lastname"
+
+            android:background="@drawable/rounded_corners"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/SignupButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/signupbtn"
+        app:layout_constraintTop_toBottomOf="@id/LastnameEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="70dp"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
